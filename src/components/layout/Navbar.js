@@ -26,4 +26,5 @@ const mapStateToProps = (state) => {
     }
   }
 
+//Connect is used to establish a connection between react component and the redux store
 export default connect(mapStateToProps)(Navbar);

@@ -19,5 +19,5 @@ const mapDispatchToProps = (dispatch) => {
         signOut: () => dispatch(signOut())
     }
 }
-
+//Connect is used to establish a connection between react component and the redux store
 export default connect(null, mapDispatchToProps)(SignedInLinks);

@@ -11,7 +11,7 @@ class AddToCart extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ 
+    this.setState({
       [e.target.id]: e.target.value,
       id: this.props.match.params.id
     })
@@ -59,4 +59,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
+//Connect is used to establish a connection between react component and the redux store
 export default connect(mapStateToProps, mapDispatchToProps)(AddToCart);

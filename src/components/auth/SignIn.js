@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions';
-import { Redirect } from 'react-router-dom'; 
+import { Redirect } from 'react-router-dom';
 
 class SignIn extends Component {
   state = {
     email:'',
     password:'',
     firstName:'',
-    lastName:''
+    lastName:'',
   }
 
   handleChange = (e) => {
@@ -61,4 +61,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
+//Connect is used to establish a connection between react component and the redux store
 export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
