@@ -8,7 +8,7 @@ class SignUp extends Component {
     email: '',
     password: '',
     firstName: '',
-    lastName: ''
+    lastName: '',
   }
   handleChange = (e) => {
     this.setState({
@@ -21,7 +21,7 @@ class SignUp extends Component {
   }
   render() {
     const { auth, authError } = this.props;
-    if (auth.uid) return <Redirect to='/' /> 
+    if (auth.uid) return <Redirect to='/' />
     return (
       <div className="container">
         <form className="white" onSubmit={this.handleSubmit}>
@@ -67,4 +67,5 @@ const mapDispatchToProps = (dispatch)=> {
   }
 }
 
+//Connect is used to establish a connection between react component and the redux store
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp)
