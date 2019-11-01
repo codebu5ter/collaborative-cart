@@ -1,3 +1,7 @@
+import {LOGIN_ERROR, LOGIN_SUCCESS,
+   SIGNOUT_SUCCESS, LOCATED,
+    SIGNUP_SUCCESS, SIGNUP_ERROR} from '../constants'
+
 const initState = {
   authError: null,
   id: ''
@@ -5,39 +9,39 @@ const initState = {
 
 const authReducer = (state = initState, action) => {
   switch(action.type){
-    case 'LOGIN_ERROR':
+    case LOGIN_ERROR :
       console.log('login error');
       return {
         ...state,
         authError: 'Login failed'
       }
 
-    case 'LOGIN_SUCCESS':
+    case LOGIN_SUCCESS :
       console.log('login success');
       return {
         ...state,
         authError: null
       }
 
-    case 'SIGNOUT_SUCCESS':
+    case SIGNOUT_SUCCESS :
       console.log('signout success');
       return state;
 
-    case 'LOCATED':
+    case LOCATED :
       console.log('location found');
       return {
         ...state,
         id: action.item.id
       }
 
-    case 'SIGNUP_SUCCESS':
+    case SIGNUP_SUCCESS :
       console.log('signup success')
       return {
         ...state,
         authError: null
       }
 
-    case 'SIGNUP_ERROR':
+    case SIGNUP_ERROR :
       console.log('signup error')
       return {
         ...state,

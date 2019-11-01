@@ -1,16 +1,18 @@
+import {ADD_ITEM, ADD_ITEM_ERROR} from '../constants'
+
 const initState = {
   id: ''
 }
 
 const cartReducer = (state = initState, action) => {
   switch(action.type){
-    case 'ADD_ITEM':
+    case ADD_ITEM :
     return {
       ...state,
       id: action.item.id
     }
 
-    case 'ADD_ITEM_ERROR':
+    case ADD_ITEM_ERROR :
       console.log(action.err);
       return state;
 
